@@ -1,0 +1,12 @@
+body {
+    background-color: silver;
+    font-family: monospace;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: goldenrod;
+}
