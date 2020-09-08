@@ -1,12 +1,660 @@
-body {
-    background-color: silver;
+* {
+    padding: 0;
+    margin: 0;
     font-family: monospace;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
 
-a {
+body {
+    background-color: rgb(237,234,229);
+    /* rgb(252,225,129); */
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Lobster', cursive;
+}
+
+p {
+    font-size: 15px;
+}
+
+.header {
+    background-image: url(./photos/profilepicture1.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 900px;
+    z-index: 4;
+}
+
+@media (max-width: 900px) {
+    .header {
+        background-size: cover;
+        background-position: center top;
+        height: 600px;
+    }
+}
+
+.nav {
+    z-index: 4;
+    position: fixed;
+    padding: 30px 0px;
+    width: 100%;
+    background-color: rgb(2,102,112); 
+    z-index: 6;
+}
+
+.nav h4 {
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+
+.header h1 {
+    padding-top: 240px;
+    padding-left: 160px;
+    font-size: 65px;
+    
+
+}
+
+.header h4 {
+    padding-left: 160px;
+    font-size: larger;
+   
+} 
+
+.bio {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.bio h2 {
+    font-size: 40px;
+}
+
+.bio h4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.bio p {
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+    text-align: justify;
+    
+}
+
+@media (max-width: 900px) {
+    .bio p {
+        font-size: 10px;
+        width: 100%;
+        
+    }
+}
+
+@media (max-width: 900px) {
+    .bio h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .bio h4 {
+        font-size: 16px;
+    }
+}
+
+.icon {
+    display: inline-block;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+}
+
+@media (max-width: 900px) {
+    .icon {
+      width: 45%;
+    }
+}
+
+.workHistory {
+    text-align: center;
+}
+
+.workHistory h2 {
+    padding-bottom: 0px;
+    font-size: 40px;
+    margin-bottom: -25px;;
+}
+
+.workHistory h3 {
+    text-align: center;
+}
+
+.workHistory h4 {
+    
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.workHistory p {
+    padding-top: 20px;
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .workHistory h2 {
+        font-size: 18px;
+    }
+}
+
+
+
+.workHeader {
+    display: flex;
+    position: relative;
+    margin: auto;
+    top: 60px;
+    width: 75%;
+    box-shadow: 0 10px 20px rgba(2, 102, 112, 0.9);
+    z-index: 2;
+    background-color: rgb(2,102,112);
+    color: white;
+    border-radius: 6px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.workHeader h2 {
+    margin-top: 0px;
+}
+
+@media (max-width: 900px) {
+    .workHeader {
+        height: 200px;
+    }
+}
+
+
+
+.employer {
+    position: absolute;
+    margin: auto;
+    width: 75%;
+}
+
+.employer li {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+}
+
+@media (max-width: 900px) {
+    .employer li {
+        font-size: 12px;
+        margin: 0px;
+    }
+}
+
+.leedsTrinityUni {
+    display: inline-block;
+}
+
+.saltsDiner {
+    display: inline-block;
+}
+
+.performGroup {
+    display: inline-block;
+}
+
+.other {
+    display: inline-block;
+}
+
+.tabPanels ul li:hover {
+    /* background-color: rgb(159,237,215); */
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.tabPanels ul li.active {
+    background-color: rgb(252,225,129);
+    cursor: pointer;
+    border-radius: 6px;
     color: black;
 }
 
-a:hover {
-    color: goldenrod;
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
+}
+
+.work p {
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+    font-style: normal;
+    padding-top: 0px;
+}
+
+.work {
+    padding: 80px;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    border-radius: 6px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 900px) {
+    .work {
+        padding: 20px;
+        position: relative;
+        top: 50px;
+    }
+}
+
+.work h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.work h4 {
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 10px;
+}
+
+
+
+@media (max-width: 900px) {
+    .work p {
+        font-size: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .work h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .work h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .work h4 {
+        font-size: 12px;
+    }
+}
+
+.education {
+    display: flex;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.educationHeading {
+    width: 100%;
+}
+
+.educationPlace {
+    width: 200px;
+    
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 30px;
+    margin-top: 40px;
+    
+}
+
+.educationPlace img {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.educationBio h4 {
+    text-align: right;
+    font-size: 20px;
+    margin-right: 180px;
+}
+
+@media (max-width: 900px) {
+    .educationPlace {
+        margin: 0 auto;
+        text-align: center;
+        margin-right: 80px;
+    }
+}
+
+
+.educationBio {
+    width: 100%;
+}
+
+.educationBio h4 {
+    margin-top: 30px;
+}
+
+.educationBio p {
+    padding-left: 60px;
+}
+
+.uni {
+    margin: 10px 0;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.college {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.online {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.educationPlace.uni:hover {
+    filter: brightness(0) invert(1); 
+}
+
+
+.educationBio p {
+    text-align: left;
+}
+
+.lol {
+    margin: 15px;
+    padding: 15px;
+    
+}
+
+@media (max-width: 900px) {
+    .educationHeading h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .education {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .education {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .educationPlace {
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    .educationBio h4 {
+        margin-left: 100px;
+        text-align: left;
+        font-size: 25px;
+        
+    }
+}
+
+@media (max-width: 900px) {
+    .educationBio p {
+        margin-right: 0px;
+        padding-bottom: 0px;
+        text-align: left;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .educationBio {
+        margin: 0 auto;
+    }
+}
+
+.panel2 {
+    display: none;
+}
+
+.panel2.active {
+    display: block;
+}
+
+.lol:hover {
+    /* background-color: rgb(212,165,154); */
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.lol.active {
+    background-color: rgb(2,102,112);
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(2, 102, 112, 0.9);
+}
+
+.lol.active img {
+    filter: brightness(0) invert(1); 
+}
+
+.lol.active h4 {
+    filter: brightness(0) invert(1); 
+}
+
+.personalBio { 
+    width: 90%;
+    margin: 0 auto;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    border-radius: 6px;   
+    
+}
+
+.personalBio p {
+    margin-top: 40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    width: 80%;
+    margin: 20px auto;
+   
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(2,102,112);
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.contact1 {
+    display: flex;
+    margin-left: 170px;
+   
+}
+
+.contact2 {
+    margin-right: 190px;
+    margin-top: 34px;
+    color: rgb(252,225,129);
+    
+}
+
+.contact2 p {
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+}
+
+.footerIcons {
+    display: flex;
+    
+    
+}
+
+.footerIcons img {
+    margin: 10px 10px;
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1);
+    margin: 30px 20px;
+    padding-top: 5px;
+    
+}
+
+@media (max-width: 900px) {
+    .footerIcons {
+        height: 20px;
+        width: 20px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact1{
+        margin-left: 20px;
+        margin: 0px;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact2 {
+        margin-right: 40px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footerIcons img {
+       margin: 0px 40px;
+        
+    }
+}
+
+
+
+.mobileNumber .mobileText {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(252,225,129);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+  
+.mobileNumber:hover .mobileText {
+    visibility: visible;
+}
+
+.location .locationText {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgb(252,225,129);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    margin-left: 16px; 
+}
+
+.location:hover .locationText {
+    visibility: visible;
+}
+
+@media (max-width: 900px) {
+    p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+.hello {
+    padding: 80px;
+    width: 95%;
+    margin: 0 auto;
+    z-index: 5;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    border-radius: 6px;
+    
+    position: relative;
+    bottom: 50px;
+    background-color: white;
+}
+
+@media (max-width: 900px) {
+    .personalBio {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .hello {
+        padding: 10px;
+    }
 }
